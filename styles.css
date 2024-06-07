@@ -1,6 +1,6 @@
 body{
     padding: 0%;
-    background-color: aquamarine;
+    background-color: rgb(212, 236, 183);
     align-items: center;
 }
 #cityInput{
@@ -16,4 +16,12 @@ body{
     color: white;
     border: none;
     border-radius: 7px;
+}
+#data{
+    width: 6cm;
+    height: 8cm;
+    background: linear-gradient( rgb(45, 130, 240),rgb(0, 140, 255),rgb(206, 128, 12));
+    border: none;
+    border-radius: 5px;
+    margin-left: 2cm;
 }
