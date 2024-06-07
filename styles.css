@@ -4,6 +4,7 @@ body{
     align-items: center;
 }
 #cityInput{
+    font-style: bold;
     padding: 3px;
     font-size: 20px;
 }
