@@ -12,16 +12,27 @@ body{
     padding-left: 6px;
     padding-right: 6px;
     font-size: 20px;
-    background-color: darkgreen;
+    background-color: rgb(5, 148, 5);
     color: white;
     border: none;
     border-radius: 7px;
 }
+#submitButton:hover{
+    background-color: rgb(6, 95, 6);
+}
 #data{
+    padding: 40px;
     width: 6cm;
     height: 8cm;
     background: linear-gradient( rgb(45, 130, 240),rgb(0, 140, 255),rgb(206, 128, 12));
     border: none;
     border-radius: 5px;
     margin-left: 2cm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#cityName{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
 }
