@@ -1,22 +1,39 @@
-const cityName = document.getElementById('cityInput');
-const apiKey = 'ad96279adc3636cb8c2a6383890f6c5c'
+const cityInput = document.getElementById('cityInput');
+const apiKey = 'ad96279adc3636cb8c2a6383890f6c5c';
+const errorMessage = document.getElementById('errorMesssage');
+const submitButton = document.getElementById('submitButton');
 
-async function getWeatherData(city, apiKey){
-    if(cityName){
+function displayWeather(weatherInfo){
+
+    console.log(weatherInfo)
+
+}
+
+async function getWeatherData(city){
+    const apiURL = `http://api.weatherapi.com/v1/current.json?key=9c4c1b8400c44b9184270359240806&q=${city}&aqi=no`;
+    const response = await fetch(apiURL);
+    
+    if(!response.ok){
+        document.getElementById('data').innerHTML = 'could not fetch city data'
+        
+    }
+    return await response.json();
+}
+
+submitButton.onclick = async function submit(){
+    const city = cityInput.value;
+    if(city){
         try{
-
+            const weatherData = await getWeatherData(city);
+            displayWeather(weatherData);
+            
         }
         catch(error){
-            
-        };
+            document.getElementById('data').innerHTML = 'could not fetch city data becasue '+ error
+        }
+
     }
     else{
-        displayError('Please enter a city name')
+        document.getElementById('data').innerHTML = 'Please type in a city'
     }
-}
-function displayWeatherinfo(){
-
-}
-function displayError(message){
- 
 }
