@@ -22,7 +22,8 @@ body{
     background-color: rgb(6, 95, 6);
 }
 #data{
-    padding: 40px;
+    padding: 30px;
+    padding-top: 1px;
     width: 6cm;
     height: 8cm;
     background: linear-gradient( rgb(45, 130, 240),rgb(0, 140, 255),rgb(206, 128, 12));
@@ -34,9 +35,24 @@ body{
     align-items: center;
 }
 #cityName{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
+    margin: 10px;
+    margin-bottom: 0px;
 }
 #errorMessage{
     font-weight: bold;
+}
+#climateState{
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+}
+#humidity{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
+#temp{
+    margin: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
