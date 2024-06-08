@@ -1,6 +1,4 @@
 const cityInput = document.getElementById('cityInput');
-const apiKey = 'ad96279adc3636cb8c2a6383890f6c5c';
-const errorMessage = document.getElementById('errorMesssage');
 const submitButton = document.getElementById('submitButton');
 
 function displayWeather(weatherInfo){
@@ -9,8 +7,8 @@ function displayWeather(weatherInfo){
 
     document.getElementById('cityName').innerHTML= city;
     document.getElementById('climateState').innerHTML= text;
-    document.getElementById('humidity').innerHTML= 'humidity ' +humidity;
-    document.getElementById('temp').innerHTML= 'temperature ' + temp_c;
+    document.getElementById('humidity').innerHTML= 'Humidity ' +humidity+ '%';
+    document.getElementById('temp').innerHTML= 'Temperature ' + temp_c+ '';
      
 
     console.log(weatherInfo)

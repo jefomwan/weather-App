@@ -22,6 +22,7 @@ body{
     background-color: rgb(6, 95, 6);
 }
 #data{
+    margin-top: 1cm;
     padding: 30px;
     padding-top: 1px;
     width: 6cm;
