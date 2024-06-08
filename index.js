@@ -5,10 +5,10 @@ const submitButton = document.getElementById('submitButton');
 
 function displayWeather(weatherInfo){
     
-    const {location:{name:city}, current:{temp_c, humidity}} = weatherInfo;
+    const {location:{name:city}, current:{temp_c, humidity, condition:{text}}} = weatherInfo;
 
     document.getElementById('cityName').innerHTML= city;
-    document.getElementById('climateState').innerHTML= 
+    document.getElementById('climateState').innerHTML= text;
     document.getElementById('humidity').innerHTML= 'humidity ' +humidity;
     document.getElementById('temp').innerHTML= 'temperature ' + temp_c;
      
