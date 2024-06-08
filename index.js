@@ -4,6 +4,14 @@ const errorMessage = document.getElementById('errorMesssage');
 const submitButton = document.getElementById('submitButton');
 
 function displayWeather(weatherInfo){
+    
+    const {location:{name:city}, current:{temp_c, humidity}} = weatherInfo;
+
+    document.getElementById('cityName').innerHTML= city;
+    document.getElementById('climateState').innerHTML= 
+    document.getElementById('humidity').innerHTML= 'humidity ' +humidity;
+    document.getElementById('temp').innerHTML= 'temperature ' + temp_c;
+     
 
     console.log(weatherInfo)
 
@@ -14,10 +22,11 @@ async function getWeatherData(city){
     const response = await fetch(apiURL);
     
     if(!response.ok){
-        document.getElementById('data').innerHTML = 'could not fetch city data'
-        
+        document.getElementById('data').innerHTML = 'could not fetch city data';
     }
+    else{
     return await response.json();
+    }
 }
 
 submitButton.onclick = async function submit(){
